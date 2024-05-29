@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import ImageOne from "../../public/Wishlist.png";
 import imageTwo from "../../public/Cart1 with buy.png";
-import SidePanel from "./sidepanel";
 import SidePanelComponents from "./sidepanel";
 
 export default function Navigation() {
