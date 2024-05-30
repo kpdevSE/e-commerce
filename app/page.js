@@ -41,6 +41,11 @@ import women from "../public/women.png";
 import speakers from "../public/speakers.png";
 import perfume from "../public/perfume.png";
 
+// Images of Services
+import serviceOne from "../public/Services.png";
+import serviceTwo from "../public/call.png";
+import serviceThree from "../public/garantee.png";
+
 export default function App() {
   const dummyData = [
     {
@@ -167,6 +172,27 @@ export default function App() {
       name: "Quilted Satin Jacket",
       price: "560",
       images: jacket,
+    },
+  ];
+
+  const services = [
+    {
+      id: 1,
+      topic: "FREE AND FAST DELIVERY",
+      secondTopic: "Free delivery for all orders over $140",
+      images: serviceOne,
+    },
+    {
+      id: 2,
+      topic: "24/7 CUSTOMER SERVICE",
+      secondTopic: "Friendly 24/7 customer support",
+      images: serviceTwo,
+    },
+    {
+      id: 3,
+      topic: "MONEY BACK GUARANTEE",
+      secondTopic: "We reurn money within 30 days",
+      images: serviceThree,
     },
   ];
 
@@ -706,6 +732,25 @@ export default function App() {
         </div>
       </div>
       {/* End Of Seventh Home Section */}
+
+      {/* Eight Home Section */}
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 place-content-center place-items-center mt-24">
+        {services.map((e) => {
+          return (
+            <div
+              key={e.id}
+              className="flex items-center justify-center flex-col gap-4"
+            >
+              <Image src={e.images} alt="images" />
+              <div className="flex items-center justify-center flex-col">
+                <h1 className="font-bold">{e.topic}</h1>
+                <h2>{e.secondTopic}</h2>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      {/* End Of Eight Home Section */}
     </div>
   );
 }
