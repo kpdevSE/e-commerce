@@ -25,6 +25,16 @@ import bag from "../public/handbag.png";
 import cpu from "../public/cpucooler.png";
 import cupboard from "../public/cupboard.png";
 
+// Our Products Images
+import snacks from "../public/snacks.png";
+import newCamare from "../public/cameranew.png";
+import laptop from "../public/laptop.png";
+import cream from "../public/cream.png";
+import car from "../public/New-Mercedes-Benz-Gtr-Licensed-Ride-on-Car-Kids-Electric-Toy-Car 1.png";
+import shoes from "../public/shoes.png";
+import gamingConsole from "../public/console.png";
+import jacket from "../public/jacket.png";
+
 export default function App() {
   const dummyData = [
     {
@@ -103,6 +113,57 @@ export default function App() {
     },
   ];
 
+  const ourProducts = [
+    {
+      id: 1,
+      name: "Breed Dry Dog Foods",
+      price: "120",
+      images: snacks,
+    },
+    {
+      id: 2,
+      name: "CANON EOS DSLR Camera",
+      price: "750",
+      images: newCamare,
+    },
+    {
+      id: 3,
+      name: "ASUS FHD Gaming Laptop",
+      price: "1200",
+      images: laptop,
+    },
+    {
+      id: 4,
+      name: "Curology Product Set ",
+      price: "560",
+      images: cream,
+    },
+    {
+      id: 5,
+      name: "Kids Electric Car(New Arrived)",
+      price: "120",
+      images: car,
+    },
+    {
+      id: 6,
+      name: "Jr. Zoom Soccer Cleats",
+      price: "750",
+      images: shoes,
+    },
+    {
+      id: 7,
+      name: "GP11 Shooter USB Gamepad",
+      price: "1200",
+      images: gamingConsole,
+    },
+    {
+      id: 8,
+      name: "Quilted Satin Jacket",
+      price: "560",
+      images: jacket,
+    },
+  ];
+
   return (
     <div className="w-[85%] mx-auto h-full">
       <Navigation />
@@ -111,139 +172,131 @@ export default function App() {
       <div className="w-full h-full lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-10 mt-10 flex-col-reverse justify-center items-center">
         <div className="lg:w-[30%] w-full">
           <ul className="flex flex-col items-start justify-center gap-6">
-            <Link href={"/Phones"}>
-              <div className="flex items-center justify-between gap-9 w-[200px]">
-                <li className="font-bold">PHONES</li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </div>
-            </Link>
-            <Link href={"/Computers"}>
-              <div className="flex items-center justify-between gap-9 w-[200px]">
-                <li className="font-bold">COMPUTERS</li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </div>
-            </Link>
-            <Link href={"/Watches"}>
-              <div className="flex items-center justify-between gap-9 w-[200px]">
-                <li className="font-bold">SMART WATCHES</li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </div>
-            </Link>
-            <Link href={"/Camaersa"}>
-              <div className="flex items-center justify-between gap-9 w-[200px]">
-                <li className="font-bold">CAMERAS</li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </div>
-            </Link>
-            <Link href={"/Headphones"}>
-              <div className="flex items-center justify-between gap-9 w-[200px]">
-                <li className="font-bold">HEADPHONES</li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </div>
-            </Link>
-            <Link href={"/Games"}>
-              <div className="flex items-center justify-between gap-9 w-[200px]">
-                <li className="font-bold">GAMES</li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </div>
-            </Link>
-            <Link href={"/Keyboards"}>
-              <div className="flex items-center justify-between gap-9 w-[200px]">
-                <li className="font-bold">KEYBOARDS & MOUSE</li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </div>
-            </Link>
+            <div className="flex items-center justify-between gap-9 w-[200px]">
+              <li className="font-bold">PHONES</li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+
+            <div className="flex items-center justify-between gap-9 w-[200px]">
+              <li className="font-bold">COMPUTERS</li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+
+            <div className="flex items-center justify-between gap-9 w-[200px]">
+              <li className="font-bold">SMART WATCHES</li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+
+            <div className="flex items-center justify-between gap-9 w-[200px]">
+              <li className="font-bold">CAMERAS</li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+
+            <div className="flex items-center justify-between gap-9 w-[200px]">
+              <li className="font-bold">HEADPHONES</li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+
+            <div className="flex items-center justify-between gap-9 w-[200px]">
+              <li className="font-bold">GAMES</li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+
+            <div className="flex items-center justify-between gap-9 w-[200px]">
+              <li className="font-bold">KEYBOARDS & MOUSE</li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
           </ul>
         </div>
         <div className="lg:w-[70%] w-full flex items-center justify-center mt-8 lg:mt-0">
@@ -509,6 +562,110 @@ export default function App() {
         </div>
       </div>
       {/* End of Fifth Home Section */}
+
+      {/* Six Home Section */}
+
+      <div className="mt-56 flex flex-col gap-10">
+        <div className="flex lg:items-center lg:justify-start gap-3 items-center">
+          <Image src={rectangle} alt="rectangle" />
+          <h1 className="text-[#DB4444] font-bold">Our Products</h1>
+        </div>
+        <div className="flex lg:items-center lg;justify-between w-full lg:flex-row lg:gap-10  gap-6 mt-8 flex-col">
+          <h1 className="lg:text-4xl lg:font-extrabold text-2xl font-extrabold">
+            Explore Our Products
+          </h1>
+          <button className="w-[180px] h-[40px] text-white bg-[#DB4444] ">
+            Show Products
+          </button>
+        </div>
+        <div className="grid lg:grid-cols-4 place-items-center md:grid-cols-2 md:gap-6 mt-10 place-content-center gap-5">
+          {ourProducts.map((e) => {
+            return (
+              <div key={e.id} className="w-full">
+                <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                  <div className="flex items-center w-full justify-center">
+                    <Image
+                      className="w-[50%]"
+                      src={e.images}
+                      alt="Sunset in the mountains"
+                    />
+                  </div>
+                  <div className="px-6 py-4">
+                    <div className="font-bold text-xl mb-2">{e.name}</div>
+                    <p className="text-gray-700 text-base font-bold">
+                      ${e.price}
+                    </p>
+
+                    <div className="flex items-center justify-start mt-5">
+                      <svg
+                        className="w-4 h-4 text-yellow-300 ms-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 text-yellow-300 ms-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 text-yellow-300 ms-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 text-yellow-300 ms-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <p className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+                        4.95
+                      </p>
+                      <p className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+                        of
+                      </p>
+                      <p className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+                        5
+                      </p>
+                    </div>
+                  </div>
+                  <div className="px-6 pt-4 pb-2">
+                    <button className="w-full h-[40px] text-white bg-black">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* End Of Six Home Section */}
     </div>
   );
 }
