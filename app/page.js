@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navigation from "./components/mainNavigation";
 import imageOne from "../public/main.png";
+import imageTwo from "../public/JBL_BOOMBOX_2_HERO_020_x1 (1) 1.png";
 import Link from "next/link";
 import ClockComponent from "./components/clock";
 
@@ -11,12 +12,18 @@ import keyboard from "../public/keyboard.png";
 import monitor from "../public/tv.png";
 import chair from "../public/gamingchair.png";
 
-// Catergories
+// Catergories Images
 import phone from "../public/Category-Phone.png";
 import computer from "../public/Category-Computer.png";
 import watch from "../public/Category-Watch.png";
 import headphone from "../public/Category-Headphone.png";
 import game from "../public/Category-Game.png";
+
+// This Month Images
+import coat from "../public/suite.png";
+import bag from "../public/handbag.png";
+import cpu from "../public/cpucooler.png";
+import cupboard from "../public/cupboard.png";
 
 export default function App() {
   const dummyData = [
@@ -66,6 +73,33 @@ export default function App() {
     {
       id: 5,
       images: headphone,
+    },
+  ];
+
+  const thisMonth = [
+    {
+      id: 1,
+      name: "The North Coat",
+      price: "120",
+      images: coat,
+    },
+    {
+      id: 2,
+      name: "GUCCI Duffle Bag",
+      price: "750",
+      images: bag,
+    },
+    {
+      id: 3,
+      name: "RGB Liquid CPU Cooler",
+      price: "1200",
+      images: cpu,
+    },
+    {
+      id: 4,
+      name: "Small Bookself ",
+      price: "560",
+      images: cupboard,
     },
   ];
 
@@ -331,12 +365,12 @@ export default function App() {
             Browse by Catergories
           </h1>
         </div>
-        <div className="grid lg:grid-cols-5 place-items-center md:grid-cols-2 md:gap-6 mt-10 gap-6">
+        <div className="grid lg:grid-cols-5 place-items-center md:grid-cols-2 md:gap-6 mt-24 gap-6">
           {catergories.map((e) => {
             return (
               <div key={e.id}>
                 <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                  <div className="flex items-center w-full justify-center">
+                  <div className="flex items-center w-full justify-center hover:cursor-pointer">
                     <Image
                       className="w-full"
                       src={e.images}
@@ -350,6 +384,131 @@ export default function App() {
         </div>
       </div>
       {/* End Of Third Home Section */}
+
+      <div className="bg-gray-500 w-full h-[1px] mt-24 rounded-lg"></div>
+
+      {/* Forth Home Section */}
+      <div className="mt-24 flex flex-col gap-10">
+        <div className="flex lg:items-center lg:justify-start gap-3 items-center">
+          <Image src={rectangle} alt="rectangle" />
+          <h1 className="text-[#DB4444] font-bold">This Month</h1>
+        </div>
+        <div className="flex lg:items-center lg;justify-between w-full lg:flex-row lg:gap-10  gap-6 mt-8 flex-col">
+          <h1 className="lg:text-4xl lg:font-extrabold text-2xl font-extrabold">
+            Browse by Catergories
+          </h1>
+          <button className="w-[180px] h-[40px] text-white bg-[#DB4444] ">
+            Show Products
+          </button>
+        </div>
+        <div className="grid lg:grid-cols-4 place-items-center md:grid-cols-2 md:gap-6 mt-10 place-content-center">
+          {thisMonth.map((e) => {
+            return (
+              <div key={e.id} className="w-full">
+                <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                  <div className="flex items-center w-full justify-center">
+                    <Image
+                      className="w-[50%]"
+                      src={e.images}
+                      alt="Sunset in the mountains"
+                    />
+                  </div>
+                  <div className="px-6 py-4">
+                    <div className="font-bold text-xl mb-2">{e.name}</div>
+                    <p className="text-gray-700 text-base font-bold">
+                      ${e.price}
+                    </p>
+
+                    <div className="flex items-center justify-start mt-5">
+                      <svg
+                        className="w-4 h-4 text-yellow-300 ms-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 text-yellow-300 ms-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 text-yellow-300 ms-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 text-yellow-300 ms-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <p className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+                        4.95
+                      </p>
+                      <p className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+                        of
+                      </p>
+                      <p className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+                        5
+                      </p>
+                    </div>
+                  </div>
+                  <div className="px-6 pt-4 pb-2">
+                    <button className="w-full h-[40px] text-white bg-black">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* End of Fourth Home Section */}
+
+      {/* Fifth Hoome Section */}
+      <div className="mt-44 flex lg:flex-row lg:items-center lg:justify-between w-full flex-col items-center justify-center gap-8">
+        <div className="lg:w-[50%] w-full flex lg:items-start lg:justify-start flex-col gap-11 justify-center items-center">
+          <h2 className="text-[#2dbb5c] font-bold text-2xl">Catergories</h2>
+          <h1 className="lg:text-7xl font-bold md:text-5xl lg:text-left text-center text-4xl">
+            Enhance Your <br /> Music Experience
+          </h1>
+          <button className="bg-[#00FF66] w-[130px] h-[50px] font-bold text-white rounded-md">
+            Buy Now
+          </button>
+        </div>
+        <div className="lg:w-[40%] md:w-[60%] w-[85%]">
+          <Image
+            src={imageTwo}
+            alt="Second Background Image"
+            className="w-full"
+          />
+        </div>
+      </div>
+      {/* End of Fifth Home Section */}
     </div>
   );
 }
