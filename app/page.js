@@ -35,6 +35,12 @@ import shoes from "../public/shoes.png";
 import gamingConsole from "../public/console.png";
 import jacket from "../public/jacket.png";
 
+// New Arrivals Images
+import playStation from "../public/playstation.png";
+import women from "../public/women.png";
+import speakers from "../public/speakers.png";
+import perfume from "../public/perfume.png";
+
 export default function App() {
   const dummyData = [
     {
@@ -666,6 +672,40 @@ export default function App() {
       </div>
 
       {/* End Of Six Home Section */}
+
+      <div className="bg-gray-500 w-full h-[1px] mt-24 rounded-lg"></div>
+
+      {/* Seventh Home Section */}
+      <div className="mt-28">
+        <div className=" flex flex-col gap-10">
+          <div className="flex lg:items-center lg:justify-start gap-3 items-center">
+            <Image src={rectangle} alt="rectangle" />
+            <h1 className="text-[#DB4444] font-bold">Features</h1>
+          </div>
+          <div className="flex lg:items-center lg;justify-between w-full lg:flex-row lg:gap-10  gap-6 mt-8 flex-col">
+            <h1 className="lg:text-4xl lg:font-extrabold text-2xl font-extrabold">
+              New Arrivals
+            </h1>
+          </div>
+        </div>
+        <div className="w-full flex lg:flex-row lg:items-center lg:justify-between flex-col items-center justify-center mt-24 gap-6">
+          <div className="lg:w-[50%] w-full">
+            <Image src={playStation} alt="play station" className="w-full" />
+          </div>
+          <div className="lg:w-[50%] w-full flex items-center justify-center gap-5 flex-col">
+            <Image src={women} alt="women" className="w-full" />
+            <div className="flex lg:flex-row lg:item-center lg:justify-between w-full  gap-3">
+              <div className="lg:w-[50%] w-full">
+                <Image src={speakers} alt="speakers" className="w-full" />
+              </div>
+              <div className="lg:w-[50%] w-full">
+                <Image src={perfume} alt="perfume" className="w-full" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* End Of Seventh Home Section */}
     </div>
   );
 }
