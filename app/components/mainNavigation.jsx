@@ -21,9 +21,6 @@ export default function Navigation() {
             <Link href={"/About"}>
               <li className="font-bold">ABOUT</li>
             </Link>
-            <Link href={"/SignUp"}>
-              <li className="font-bold">SIGNUP</li>
-            </Link>
           </ul>
         </div>
         <div className="hidden lg:block md:block">
